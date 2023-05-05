@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="English (India)"
+        android:textSize="16sp"
+        android:textColor="#c4c4c4"
+        android:layout_marginTop="6dp"
+        android:layout_centerHorizontal="true"
+        app:drawableEndCompat="@drawable/baseline_keyboard_arrow_down_24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:layout_centerInParent="true"
+        tools:ignore="ExtraText">
+
+        <EditText
+            android:id="@+id/email_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+            android:hint="Phone Number, email or Username"
+            android:textColorHint="@color/hint_colour"
+            android:textColor="@color/txt_colour"
+            android:backgroundTint="@color/default_background"/>
+
+
+        <EditText
+            android:id="@+id/password_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:drawableEnd="@drawable/ic_eye"
+            android:hint="Password"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:textColorHint="@color/hint_colour"
+            android:textColor="@color/txt_colour"
+            android:backgroundTint="@color/default_background"
+            />
+        />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sign_in_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log In"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#1DA1F2"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_Sign_Up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:text="@string/Sign_Up"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:clickable="true"
+        tools:ignore="TextSizeCheck" />
+
+
+</RelativeLayout>

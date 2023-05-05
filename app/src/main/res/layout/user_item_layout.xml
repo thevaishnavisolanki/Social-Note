@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_edit_text"
+    android:layout_gravity="center_horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_profile_image_search"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_avatar"/>
+
+        <TextView
+            android:id="@+id/name_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_profile_image_search"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="user name"
+            android:textColor="#14171A"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/user_name_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_search"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="user profile name"
+            android:textColor="#14171A"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/follow_btn_search"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/user_name_search"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#14171A"
+            android:inputType="text"
+            android:text="follow"
+            android:textColor="#F5F8FA"
+            android:textSize="14dp"
+            app:cornerRadius="100dp">
+
+        </Button>
+
+    </RelativeLayout>
+
+</RelativeLayout>

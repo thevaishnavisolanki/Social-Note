@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyApplogin" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#1DA1F2</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="mainTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#1DA1F2</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--    Dark theme colors-->
+
+    <item name="whtBlc" type="color">#333333</item>
+    <item name="chatBack" type="color">#141414</item>
+    <item name="msgBox" type="color">#1e1e1e</item>
+    <item name="inMsgBox" type="color">#282828</item>
+    <item name="txtCol" type="color">@color/white</item>
+    <item name="sendBack" type="color">#00579E</item>
+    <item name="receiveBack" type="color">#33E7E7E7</item>
+    <item name="otpBack" type="color">#505050</item>
+
+</resources>
