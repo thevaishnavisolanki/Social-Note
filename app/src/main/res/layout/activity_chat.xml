@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,9 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
+        android:clickable="true"
         android:background="#1DA1F2"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -58,7 +57,7 @@
                     android:layout_height="wrap_content"/>
 
                 <TextView
-                    android:id="@+id/status"
+                    android:id="@+id/user_status"
                     android:text=""
                     android:textColor="@color/white"
                     android:textSize="14sp"
@@ -80,8 +79,7 @@
         android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="65dp">
+        android:layout_above="@+id/linear02">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -93,95 +91,57 @@
 
     <LinearLayout
         android:id="@+id/linear02"
-        android:background="@drawable/background_shape"
-        android:backgroundTint="@color/msgBox"
+        android:layout_width="403dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/background_shape"
+        android:backgroundTint="#DADEDF"
         android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <androidx.cardview.widget.CardView
-            app:cardUseCompatPadding="true"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="3dp"
-            android:layout_weight="2"
-            android:padding="10dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/messageBox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Start a message"
+            android:textColorHint="#858585"
+            android:textSize="15sp" />
 
-            <LinearLayout
-                android:padding="4dp"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                android:background="@color/inMsgBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/ic_attachment"
+            app:tint="#858585" />
 
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <EditText
-                        android:id="@+id/messageBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/transparent"
-                        android:gravity="start"
-                        android:hint="Message..."
-                        android:padding="5dp"
-                        android:paddingStart="5dp"
-                        android:paddingEnd="1dp"
-                        android:textColorHint="#858585"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        tools:ignore="TouchTargetSizeCheck" />
-
-
-                </LinearLayout>
-
-                <ImageView
-                    android:id="@+id/attachment"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    app:tint="#858585"
-                    android:src="@drawable/ic_attachment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-                <ImageView
-                    android:id="@+id/camera"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    app:tint="#858585"
-                    android:src="@drawable/ic_camera"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/ic_camera"
+            app:tint="#858585" />
 
         <ImageView
             android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_gravity="center"
-            android:layout_marginEnd="9dp"
-            android:padding="8dp"
             android:background="@drawable/background_shape"
             android:backgroundTint="#1DA1F2"
-            app:tint="@color/white"
+            android:padding="5dp"
             android:src="@drawable/ic_send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            app:tint="@color/white" />
 
     </LinearLayout>
 </RelativeLayout>

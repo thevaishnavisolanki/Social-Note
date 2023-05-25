@@ -9,4 +9,4 @@ data class Message(
     val receiverId: String?=null,
     val conversationId: String="",
     val messageId: String?=null
-)
+):java.io.Serializable

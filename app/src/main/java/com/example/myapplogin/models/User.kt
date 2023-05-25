@@ -6,5 +6,6 @@ data class User(
     var bio : String ?= null,
     var image : String ?= null,
     var uid : String ?= null,
-    var email:String?=null
+    var email:String?=null,
+
 ):java.io.Serializable

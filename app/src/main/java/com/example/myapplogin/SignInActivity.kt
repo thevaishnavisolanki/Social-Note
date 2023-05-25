@@ -11,10 +11,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 
+
 class SignInActivity : AppCompatActivity() {
 
     private lateinit var btnLogin: MaterialButton
     private lateinit var textView: TextView
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +36,11 @@ class SignInActivity : AppCompatActivity() {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
+
+
+
+
+
     }
     private fun loginuser() {
         val email = findViewById<EditText>(R.id.email_login).text.toString()
@@ -58,6 +66,7 @@ class SignInActivity : AppCompatActivity() {
 
                 val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
+
                 mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
@@ -71,6 +80,7 @@ class SignInActivity : AppCompatActivity() {
                             val bio = ""
                             val sharedPreferencesManager = SharedPreferencesManager(this)
                             sharedPreferencesManager.saveUserData(uid, email, username, name, image, bio)
+
 
                             val intent = Intent(this@SignInActivity, HomeActivity::class.java)
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)

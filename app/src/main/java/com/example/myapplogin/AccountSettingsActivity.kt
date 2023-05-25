@@ -17,14 +17,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.myapplogin.models.User
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
 import java.util.*
-import kotlin.collections.HashMap
 
 
 class AccountSettingsActivity : AppCompatActivity() {
@@ -210,6 +206,7 @@ class AccountSettingsActivity : AppCompatActivity() {
                             image = image,
                             email = firebaseAuth.email,
                             uid = uid
+
                         )
                         Log.i("selectedImage", image!!)
                         FirebaseDatabase.getInstance().reference.child("users").child(profileID)

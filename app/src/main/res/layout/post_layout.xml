@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="12dp"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
     app:cardElevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="440dp"
         android:orientation="vertical">
 
 
@@ -26,6 +26,7 @@
                 android:layout_width="62dp"
                 android:layout_height="match_parent"
                 android:padding="5dp"
+                android:backgroundTint="#F5F8FA"
                 android:src="@drawable/ic_avatar" />
 
             <TextView
@@ -45,39 +46,33 @@
         <ImageView
             android:id="@+id/post_image_home"
             android:layout_width="match_parent"
-            android:layout_height="235dp"
+            android:layout_height="300dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_avatar" />
 
-        <TextView
-            android:id="@+id/likes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/txt_colour"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp">
+            android:layout_margin="3dp">
 
             <ImageView
                 android:id="@+id/post_image_like_btn"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="3dp"
+                android:layout_margin="3dp"
                 android:padding="1dp"
                 android:src="@drawable/like_icon" />
 
             <ImageView
                 android:id="@+id/post_image_comment_btn"
-                android:layout_width="33dp"
-                android:layout_height="33dp"
-                android:layout_marginStart="6dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="3dp"
                 android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="3dp"
                 android:layout_toEndOf="@+id/post_image_like_btn"
                 android:src="@drawable/comments_icon" />
 
@@ -86,47 +81,22 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
                 android:src="@drawable/bookmark" />
 
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/publisher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/txt_colour"
-            android:textSize="15dp"
-            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/description"
-            android:layout_width="377dp"
+            android:layout_width="match_parent"
+            android:layout_margin="3dp"
             android:layout_height="25dp"
-            android:layout_marginStart="10dp"
+            android:paddingLeft="3dp"
             android:textColor="@color/txt_colour"
             android:textSize="15dp" />
-
-        <!--        <TextView-->
-<!--            android:id="@+id/comments"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:layout_marginTop="5dp"-->
-<!--            android:layout_marginBottom="5dp"-->
-<!--            android:text=""-->
-<!--            android:textColor="@color/txt_colour"-->
-<!--            android:textSize="16dp" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/post_timestamp"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:textColor="@color/txt_colour"-->
-<!--            android:textSize="12sp" />-->
 
 
     </LinearLayout>

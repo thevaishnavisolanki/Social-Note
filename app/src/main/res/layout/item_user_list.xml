@@ -46,7 +46,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lastChat"
+                    android:id="@+id/Chatbio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Last Chat"

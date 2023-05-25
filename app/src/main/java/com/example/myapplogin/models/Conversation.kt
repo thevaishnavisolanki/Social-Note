@@ -6,5 +6,6 @@ data class Conversation (
     var updateAt: Any? = null,//timestamp
     var conversationID: String = "",//timestamp
     var lastmessage: Message? = null,//last message of conversation
-    var members:List<String>?= null//members array with uid
-)
+    var members:List<String>?= null,//members array with uid
+    var user:User?= null//members array with uid
+):java.io.Serializable

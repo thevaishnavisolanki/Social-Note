@@ -4,7 +4,7 @@ package com.example.myapplogin
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplogin.adapters.UserchatlistAdapter
+import com.example.myapplogin.adapters.UserlistAdapter
 import com.example.myapplogin.databinding.ActivityUserListBinding
 import com.example.myapplogin.models.User
 import com.google.firebase.auth.ktx.auth
@@ -14,7 +14,7 @@ import com.google.firebase.ktx.Firebase
 class UserListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUserListBinding
-    private lateinit var adapter: UserchatlistAdapter
+    private lateinit var adapter: UserlistAdapter
     private var userlist: MutableList<User> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,11 +24,9 @@ class UserListActivity : AppCompatActivity() {
         binding = ActivityUserListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        adapter = UserchatlistAdapter(this, userlist)
+        adapter = UserlistAdapter(this, userlist)
         binding.recyclerViewUser.layoutManager = LinearLayoutManager(this)
         binding.recyclerViewUser.adapter = adapter
-
-
 
         Firebase.auth.currentUser?.let { currentUser ->
             val usersRef = FirebaseDatabase.getInstance().reference.child("Follow").child(currentUser.uid)
